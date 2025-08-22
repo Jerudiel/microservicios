@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: cloud-gateway
+
+  cloud:
+    gateway:
+      routes:
+        - id: buscador-service
+          uri: lb://buscador-service
+          predicates:
+            - Path=/products/**
+        - id: operador-service
+          uri: lb://operador-service
+          predicates:
+            - Path=/orders/**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    preferIpAddress: true

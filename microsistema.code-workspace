@@ -1,0 +1,20 @@
+{
+	"folders": [
+  {
+    "path": "eureka-server"
+  },
+  {
+    "path": "cloud-gateway"
+  },
+  {
+    "path": "buscador-service"
+  },
+  {
+    "path": "operador-service"
+  }
+	]
+	,
+	"settings": {
+		"java.configuration.updateBuildConfiguration": "interactive"
+	}
+}
